@@ -2,6 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
+host: 0.0.0.0
 url: https://ukraineaumans.github.io/
 title: Association Ukraine Au Mans
 email: your-email@domain.com
@@ -21,10 +22,3 @@ permalink: pretty
 plugins:
   - jekyll-feed
 
-# ----------------------- #
-#   3rd Party Settings    #
-# ----------------------- #
-
-social:
-  - title: Facebook
-    url: https://www.facebook.com/groups/5582975508396386

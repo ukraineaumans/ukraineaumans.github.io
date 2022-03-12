@@ -1,84 +1,75 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.author }}">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="/css/landing-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+    <script src="https://kit.fontawesome.com/710b798d95.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
           type="text/css">
 </head>
 
-<body id="body">
+<body data-bs-spy="scroll" data-bs-target="#navbar">
 
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+<div id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Association Ukraine Au Mans</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#home">{{ site.title }}</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about">Qui sommes-nous ?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">Actualités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">Foire aux questions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#about">Qui sommes-nous ?</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#news">Actualités</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#faq">Foire Aux Questions</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+    </nav>
+</div>
+
+<section id="about" class="container">
+    <div class="row intro-header m-1">
+        <img src="/img/intro-bg.jpg" class="img-responsive center-block" alt="Stop Putin. Save Ukraine.">
     </div>
-</nav>
-
-<!-- About Section -->
-<div class="intro-header"></div>
-<section id="about" class="container content-section">
     <div class="row text-center">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h1 class="page-title">Association<br>Ukraine Au Mans</h1>
-            <hr class="intro-divider">
-            <ul class="list-inline intro-social-buttons">
-                {% for social in site.social %}
-                <li>
-                    <a href="{{ social.url }}" class="btn btn-default btn-lg"><i
-                            class="fa fa-{{ social.title }} fa-fw"></i> <span
-                            class="network-name">{{ social.title }}</span></a>
-                </li>
-                {% endfor %}
-            </ul>
-
-        </div>
+        <hr class="intro-divider">
+        <h1 class="page-title">Association Ukraine Au Mans</h1>
+        <hr class="intro-divider">
+        <p>
+            <a href="https://www.facebook.com/groups/5582975508396386" class="btn btn-secondary">
+                <i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+            <a href="mailto://xyz" class="btn btn-secondary">
+                <i class="fa-solid fa-at"></i> Email
+            </a>
+        </p>
     </div>
     <div class="row">
         <h2>Qui sommes-nous ?</h2>
+        <hr class="section-heading-spacer">
         <p>Association de collaboration humanitaire, culturelle et économique entre les sarthois et les
             ukrainiens</p>
         <p>Nunc ac auctor metus, ut lobortis dolor. Nam tincidunt dui eu nisi ultricies bibendum. Vestibulum ante ipsum
@@ -90,118 +81,103 @@
     </div>
 </section>
 
-<section id="news">
-    <div class="container">
-        <div class="row"><h2>Actualités</h2></div>
+<section id="news" class="container">
+    <div class="row">
+        <h2>Actualités</h2>
+        <hr class="section-heading-spacer">
     </div>
-    <div class="content-section-a">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Dons</h2>
-                </div>
-                <div class="col-lg-6 col-lg-offset-2 col-sm-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet nisi vel mi
-                        dictum suscipit. Quisque egestas arcu et sem blandit, a gravida erat aliquet. Fusce viverra,
-                        magna
-                        ac mollis lacinia, nisi tellus fermentum est, vel sagittis est erat facilisis urna. Etiam magna
-                        augue, finibus sit amet lacus ac, iaculis faucibus dui. Duis quis elementum leo, vitae dapibus
-                        tellus. Suspendisse scelerisque bibendum orci sit amet vehicula. Sed sit amet rutrum elit. Morbi
-                        mattis consequat diam, in condimentum nisl suscipit nec. Maecenas nulla mauris, scelerisque quis
-                        dapibus quis, scelerisque vel ligula.</p>
-                </div>
-            </div>
+    <div class="row news-post">
+        <div class="col-lg-3">
+            <h3 class="section-heading">Dons</h3>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet nisi vel mi
+                dictum suscipit. Quisque egestas arcu et sem blandit, a gravida erat aliquet. Fusce viverra,
+                magna
+                ac mollis lacinia, nisi tellus fermentum est, vel sagittis est erat facilisis urna. Etiam magna
+                augue, finibus sit amet lacus ac, iaculis faucibus dui. Duis quis elementum leo, vitae dapibus
+                tellus. Suspendisse scelerisque bibendum orci sit amet vehicula. Sed sit amet rutrum elit. Morbi
+                mattis consequat diam, in condimentum nisl suscipit nec. Maecenas nulla mauris, scelerisque quis
+                dapibus quis, scelerisque vel ligula.</p>
         </div>
     </div>
-    <div class="content-section-b">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-1 col-sm-push-6 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Actualité 2</h2>
-                </div>
-                <div class="col-lg-6 col-sm-pull-6 col-sm-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet nisi vel mi
-                        dictum suscipit. Quisque egestas arcu et sem blandit, a gravida erat aliquet. Fusce viverra,
-                        magna
-                        ac mollis lacinia, nisi tellus fermentum est, vel sagittis est erat facilisis urna. Etiam magna
-                        augue, finibus sit amet lacus ac, iaculis faucibus dui. Duis quis elementum leo, vitae dapibus
-                        tellus. Suspendisse scelerisque bibendum orci sit amet vehicula. Sed sit amet rutrum elit. Morbi
-                        mattis consequat diam, in condimentum nisl suscipit nec. Maecenas nulla mauris, scelerisque quis
-                        dapibus quis, scelerisque vel ligula.</p>
-                </div>
-            </div>
+    <div class="row news-post">
+        <div class="col-lg-3">
+            <h3 class="section-heading">Actualité 2</h3>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet nisi vel mi
+                dictum suscipit. Quisque egestas arcu et sem blandit, a gravida erat aliquet. Fusce viverra,
+                magna
+                ac mollis lacinia, nisi tellus fermentum est, vel sagittis est erat facilisis urna. Etiam magna
+                augue, finibus sit amet lacus ac, iaculis faucibus dui. Duis quis elementum leo, vitae dapibus
+                tellus. Suspendisse scelerisque bibendum orci sit amet vehicula. Sed sit amet rutrum elit. Morbi
+                mattis consequat diam, in condimentum nisl suscipit nec. Maecenas nulla mauris, scelerisque quis
+                dapibus quis, scelerisque vel ligula.</p>
         </div>
     </div>
-</section>
-
-<section id="contact">
-    <div class="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Contact</h2>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-                        {% for social in site.social %}
-                        <li>
-                            <a href="{{ social.url }}" class="btn btn-default btn-lg"><i
-                                    class="fa fa-{{ social.title }} fa-fw"></i> <span class="network-name">{{ social.title }}</span></a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
+    <div class="row news-post">
+        <div class="col-lg-3">
+            <h3 class="section-heading">Actualité 3</h3>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet nisi vel mi
+                dictum suscipit. Quisque egestas arcu et sem blandit, a gravida erat aliquet. Fusce viverra,
+                magna
+                ac mollis lacinia, nisi tellus fermentum est, vel sagittis est erat facilisis urna. Etiam magna
+                augue, finibus sit amet lacus ac, iaculis faucibus dui. Duis quis elementum leo, vitae dapibus
+                tellus. Suspendisse scelerisque bibendum orci sit amet vehicula. Sed sit amet rutrum elit. Morbi
+                mattis consequat diam, in condimentum nisl suscipit nec. Maecenas nulla mauris, scelerisque quis
+                dapibus quis, scelerisque vel ligula.</p>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <ul class="list-inline">
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted small">{{ site.copyright }}</p>
-            </div>
-            <div class="col-md-4">
-                {{ site.credits }}
-            </div>
-        </div>
+<section id="faq" class="container">
+    <div class="row">
+        <h2>Foire aux questions</h2>
+        <hr class="section-heading-spacer">
+        <p>Association de collaboration humanitaire, culturelle et économique entre les sarthois et les
+            ukrainiens</p>
+        <p>Nunc ac auctor metus, ut lobortis dolor. Nam tincidunt dui eu nisi ultricies bibendum. Vestibulum ante ipsum
+            primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque aliquam id dolor at pulvinar.
+            Donec ac nunc vel diam elementum euismod eu in purus. Mauris tincidunt mollis arcu, ut commodo nibh feugiat
+            sit amet. Nunc et massa eget justo viverra placerat non et sem. Donec malesuada leo eu convallis sodales.
+            Donec feugiat fermentum vestibulum. Praesent posuere ornare neque condimentum tincidunt. Nam vitae malesuada
+            leo. In a lacinia dui. Pellentesque velit libero, blandit ut turpis vitae, faucibus pharetra ligula. </p>
+    </div>
+</section>
+
+<section id="contact" class="container">
+    <div class="row">
+        <h2>Contact</h2>
+        <hr class="section-heading-spacer">
+        <p>Association de collaboration humanitaire, culturelle et économique entre les sarthois et les
+            ukrainiens</p>
+        <p>Nunc ac auctor metus, ut lobortis dolor. Nam tincidunt dui eu nisi ultricies bibendum. Vestibulum ante ipsum
+            primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque aliquam id dolor at pulvinar.
+            Donec ac nunc vel diam elementum euismod eu in purus. Mauris tincidunt mollis arcu, ut commodo nibh feugiat
+            sit amet. Nunc et massa eget justo viverra placerat non et sem. Donec malesuada leo eu convallis sodales.
+            Donec feugiat fermentum vestibulum. Praesent posuere ornare neque condimentum tincidunt. Nam vitae malesuada
+            leo. In a lacinia dui. Pellentesque velit libero, blandit ut turpis vitae, faucibus pharetra ligula. </p>
+    </div>
+</section>
+
+<footer class="container-fluid">
+    <div class="row">
+        <p class="copyright text-muted">{{ site.copyright }}</p>
     </div>
 </footer>
 
-<!-- jQuery Version 1.11.0 -->
-<script src="js/jquery-1.11.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
-<!-- Plugin JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="js/landing-page.js"></script>
+<script>
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#navbar'
+    })
+</script>
 
 </body>
 </html>
