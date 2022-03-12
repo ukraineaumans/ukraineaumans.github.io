@@ -52,7 +52,7 @@
 
 <section id="about" class="container">
     <div class="row intro-header m-1">
-        <img src="/img/intro-bg.jpg" class="img-responsive center-block" alt="Stop Putin. Save Ukraine.">
+        <img src="/img/intro-bg.jpg" alt="Stop Putin. Save Ukraine.">
     </div>
     <div class="row text-center">
         <hr class="intro-divider">
@@ -62,7 +62,7 @@
             <a href="https://www.facebook.com/groups/5582975508396386" class="btn btn-secondary">
                 <i class="fa-brands fa-facebook"></i> Facebook
             </a>
-            <a href="mailto://xyz" class="btn btn-secondary">
+            <a href="mailto://added-with-javascript" class="btn btn-secondary" id="email-tag">
                 <i class="fa-solid fa-at"></i> Email
             </a>
         </p>
@@ -174,9 +174,12 @@
         crossorigin="anonymous"></script>
 
 <script>
-    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-        target: '#navbar'
-    })
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbar'
+})
+
+// Avoid dumb scrappers from farming our email address
+document.getElementById('email-tag').href = 'm' + 'a' + 'i' + 'l' + 't' + 'o' + ':' + 'u' + 'k' + 'r' + 'a' + 'i' + 'n' + 'e' + 'a' + 'u' + 'm' + 'a' + 'n' + 's' + '@' + 'g' + 'm' + 'a' + 'i' + 'l' + '.' + 'c' + 'o' + 'm'
 </script>
 
 </body>
