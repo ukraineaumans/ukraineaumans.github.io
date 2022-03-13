@@ -24,6 +24,13 @@ h2::before {
     margin-right: 10px;
 }
 
+h3::before {
+    font-family: "FontAwesome";
+    content: "\f105";
+    color: #ffd500;
+    margin-right: 5px;
+}
+
 .navbar {
     background-color: #005bbb;
 }
@@ -54,6 +61,11 @@ h2::before {
     background-color: rgba(255, 213, 0, 0.2);
     border-bottom: thin #ccc solid;
     border-top: thin #ccc solid;
+}
+
+.donations-card-grid .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
 }
 
 footer {
