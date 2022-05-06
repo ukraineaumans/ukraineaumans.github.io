@@ -109,7 +109,7 @@
             <h4>Quand</h4>
             <p>Lundi, mardi, mercredi et jeudi, de 17h à 19h</p>
             <h4>Où</h4>
-            <p><a onclick="condURL(gEarthURL,gMapsURL)">Rue de Beaugé, 72700 Rouillon.</a> À côté du restaurant L’Instinct. Entre le restaurant et
+            <p><a href="#" onclick="()=>condURL(gEarthURL,gMapsURL)">Rue de Beaugé, 72700 Rouillon.</a> À côté du restaurant L’Instinct. Entre le restaurant et
                 l’imprimerie, au fond.</p>
             <h4>On accepte</h4>
             <p>
@@ -269,10 +269,10 @@
 
     function condURL(desktopURL, mobileURL) {
         let isMobile = window.matchMedia("(any-pointer:coarse)").matches
-        if isMobile {
-            window.open(mobileURL, '_blank').focus()
+        if (isMobile) {
+            window.location.href = mobileURL
         } else {
-            window.open(desktopURL, '_blank').focus()
+            window.location.href = desktopURL
         }
     }
 </script>
