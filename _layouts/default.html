@@ -109,7 +109,7 @@
             <h4>Quand</h4>
             <p>Lundi, mardi, mercredi et jeudi, de 17h à 19h</p>
             <h4>Où</h4>
-            <p><a href="https://earth.google.com/web/search/48.0129761+0.149502">Rue de Beaugé, 72700 Rouillon.</a> À côté du restaurant L’Instinct. Entre le restaurant et
+            <p><a onclick="condURL(gEarthURL,gMapsURL)">Rue de Beaugé, 72700 Rouillon.</a> À côté du restaurant L’Instinct. Entre le restaurant et
                 l’imprimerie, au fond.</p>
             <h4>On accepte</h4>
             <p>
@@ -138,7 +138,7 @@
         <div class="col-lg-7 offset-lg-1">
             <p>Le samedi 7 mai 2022 en centre-ville du Mans aura lieu une réunion des acteurs de solidarité dans le but d'échange avec les habitants. Parmi plus de 70 associations impliquées dans cet événement il y aura la nôtre. Venez nous voir et passer un moment agréable avec nous!
             </p>
-            <img src="https://www.alentoor.fr/photos/classifieds/2a/53/2a53d8da3331c040fc159963fc8066fea803a972bddd491a85c232566ceeb6b5-large.jpg">
+            <img src="https://www.alentoor.fr/photos/classifieds/2a/53/2a53d8da3331c040fc159963fc8066fea803a972bddd491a85c232566ceeb6b5-large.jpg" class="card-img">
         </div>
     </div>
     <div class="row news-post">
@@ -262,6 +262,18 @@
     // Avoid dumb scrappers from farming our email address
     for (const element of document.querySelectorAll('a[data-email]')) {
         element.href = 'm' + 'a' + 'i' + 'l' + 't' + 'o' + ':' + 'u' + 'k' + 'r' + 'a' + 'i' + 'n' + 'e' + 'a' + 'u' + 'm' + 'a' + 'n' + 's' + '@' + 'g' + 'm' + 'a' + 'i' + 'l' + '.' + 'c' + 'o' + 'm'
+    }
+
+    const gEarthURL = "https://earth.google.com/web/search/48.0129761+0.149502"
+    const gMapsURL = "https://www.google.com/maps/place/48%C2%B000'46.7%22N+0%C2%B008'58.2%22E"
+
+    function condURL(desktopURL, mobileURL) {
+        let isMobile = window.matchMedia("(any-pointer:coarse)").matches
+        if isMobile {
+            window.open(mobileURL, '_blank').focus()
+        } else {
+            window.open(desktopURL, '_blank').focus()
+        }
     }
 </script>
 
