@@ -18,25 +18,6 @@
     <script src="https://kit.fontawesome.com/710b798d95.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
           type="text/css">
-    <script>
-        const gEarthURL = "https://earth.google.com/web/search/48.0129761+0.149502"
-        const gMapsURL = "https://www.google.com/maps/place/48%C2%B000'46.7%22N+0%C2%B008'58.2%22E"
-
-        function condURL(desktopURL, mobileURL) {
-            let isMobile = window.matchMedia("(any-pointer:coarse)").matches
-            if (isMobile) {
-                window.location.href = mobileURL
-            } else {
-                window.location.href = desktopURL
-            }
-        }
-
-        function onAddressURLClick(e) {
-            e.preventDefault()
-            condURL(gEarthURL, gMapsURL)
-            return false
-        }
-    </script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar">
@@ -128,7 +109,7 @@
             <h4>Quand</h4>
             <p>Lundi, mardi, mercredi et jeudi, de 17h à 19h</p>
             <h4>Où</h4>
-            <p><a href="#" onclick="onAddressURLClick">Rue de Beaugé, 72700 Rouillon.</a> À côté du restaurant L’Instinct. Entre le restaurant et
+            <p><a href="#" id="addressURL">Rue de Beaugé, 72700 Rouillon.</a> À côté du restaurant L’Instinct. Entre le restaurant et
                 l’imprimerie, au fond.</p>
             <h4>On accepte</h4>
             <p>
@@ -282,6 +263,26 @@
     for (const element of document.querySelectorAll('a[data-email]')) {
         element.href = 'm' + 'a' + 'i' + 'l' + 't' + 'o' + ':' + 'u' + 'k' + 'r' + 'a' + 'i' + 'n' + 'e' + 'a' + 'u' + 'm' + 'a' + 'n' + 's' + '@' + 'g' + 'm' + 'a' + 'i' + 'l' + '.' + 'c' + 'o' + 'm'
     }
+
+    const gEarthURL = "https://earth.google.com/web/search/48.0129761+0.149502"
+        const gMapsURL = "https://www.google.com/maps/place/48%C2%B000'46.7%22N+0%C2%B008'58.2%22E"
+
+        function condURL(desktopURL, mobileURL) {
+            let isMobile = window.matchMedia("(any-pointer:coarse)").matches
+            if (isMobile) {
+                window.location.href = mobileURL
+            } else {
+                window.location.href = desktopURL
+            }
+        }
+
+        function onAddressURLClick(e) {
+            e.preventDefault()
+            condURL(gEarthURL, gMapsURL)
+            return false
+        }
+
+        document.getElementById("addressURL").onclick = onAddressURLClick
 </script>
 
 </body>
